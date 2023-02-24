@@ -7,13 +7,14 @@ I was having trouble finding a volume control widget for Awesome version 4 that 
 Add the volume_widget.lua file to your awesome config directory. It should be `~/.config/awesome`
 
 Add the following lines to your rc.lua file:
+
+Add near the top of the file:
 ```lua
--- Add this near the top
 -- Load the volume widget
 local volume_widget = require('volume_widget')
-
-...
-
+```
+Under the wibar section, add `setup_volume_widget(),`
+```lua
 -- {{{ Wibar
 ...
     -- Add widgets to the wibox
@@ -37,9 +38,9 @@ local volume_widget = require('volume_widget')
     }
 end)
 -- }}}
-
-...
-
+```
+Add the following key bindings. 
+```lua
 -- {{{ Key bindings
 globalkeys = gears.table.join(
 ...
