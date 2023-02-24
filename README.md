@@ -66,3 +66,8 @@ globalkeys = gears.table.join(
 ...
 ```
 
+## Post-install
+Now restart awesome, and there should be a widget in the top-right corner showing a percentage or "MUTE" if your speakers are muted. If this is not updating correctly, make sure to check the device that is being used in your volume_widget.lua file on line 8. `pactl list sinks | grep -A 100 "Built-in Audio Analog Stereo"` is what I use to find my speaker. The following lines of code search for the volume and check if the speaker is muted. 
+
+## Usage
+If everything is working correctly, you should now be able to hover the mouse over the volume widget in the top-right corner and use the mouse wheel to change the volume. Left click will mute. The keys you have mapped to XF86AudioRaiseVolume, XF86AudioLowerVolume, and XF86AudioMute on your keyboard should work as well. In my case, these are mapped to the volume wheel on my Razer Blackwidow Elite keyboard by default. 
