@@ -1,7 +1,7 @@
 # Awesome WM v4 Basic Volume Widget using pactl
 
 ## Background
-I use pipewire and easyeffects on my system, mainly for controlling my microphone. After installing Awesome for my window manager, I was having trouble finding a volume control widget for Awesome version 4 that would use pactl, have mouse controls on the widget, and would update with the volume slider on my keyboard. This script addresses all of those issues. 
+I use PipeWire and EasyEffects on my system, mainly for controlling my microphone. After installing Awesome for my window manager, I was having trouble finding a volume control widget for Awesome version 4 that would use pactl, have mouse controls on the widget, and would update with the volume slider on my keyboard. This script addresses all of those issues. 
 
 ## Install
 Add the volume_widget.lua file to your awesome config directory. It should be `~/.config/awesome`
