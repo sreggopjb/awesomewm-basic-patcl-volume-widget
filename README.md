@@ -17,7 +17,7 @@ local function update_volume_widget()
     awful.spawn.easy_async_with_shell('pactl list sinks | grep -A 100 "Your Audio Device"', function(stdout)
 ```
 
-### Add the following lines to your rc.lua file:
+### Modify the rc.lua file
 
 Add near the top of the file:
 ```lua
