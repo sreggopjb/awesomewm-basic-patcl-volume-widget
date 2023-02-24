@@ -6,6 +6,17 @@ I use pipewire and easyeffects on my system, mainly for controlling my microphon
 ## Install
 Add the volume_widget.lua file to your awesome config directory. It should be `~/.config/awesome`
 
+### Determine the speaker you're using
+Run the command `pactl list sinks` in a terminal and find the speaker device you are going to control. In my case it is "Built-in Audio Analog Stereo".
+After determining the device, modify the grep command under the `update_volume_widget()` function in the volume_widge.lua. It should look like the following:
+
+```lua
+-- Update volume widget
+local function update_volume_widget()
+    -- Run "pactl list sinks" and determine the device you're using, then modify the line bellow with your device
+    awful.spawn.easy_async_with_shell('pactl list sinks | grep -A 100 "Your Audio Device"', function(stdout)
+```
+
 ### Add the following lines to your rc.lua file:
 
 Add near the top of the file:
