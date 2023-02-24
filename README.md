@@ -6,7 +6,7 @@ I use pipewire and easyeffects on my system, mainly for controlling my microphon
 ## Install
 Add the volume_widget.lua file to your awesome config directory. It should be `~/.config/awesome`
 
-Add the following lines to your rc.lua file:
+### Add the following lines to your rc.lua file:
 
 Add near the top of the file:
 ```lua
