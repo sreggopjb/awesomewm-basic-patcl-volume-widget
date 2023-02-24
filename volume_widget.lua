@@ -4,6 +4,7 @@ local awful = require("awful")
 
 -- Update volume widget
 local function update_volume_widget()
+    -- Run "pactl list sinks" and determine the device you're using, then modify the line bellow with your device
     awful.spawn.easy_async_with_shell('pactl list sinks | grep -A 100 "Built-in Audio Analog Stereo"', function(stdout)
         local volume = string.match(stdout, '(%d?%d?%d)%% /')
         local mute = string.match(stdout, 'Mute:%s+(%a+)')
